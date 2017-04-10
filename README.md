@@ -35,6 +35,8 @@ sudo tc qdisc add dev $IF root netem delay 50ms
 
 ## Some results
 
+# Server and broker collocated and remote client 
+
 * Min on 5 runs
 * Results for symetric and asymetric latencies (asymetric : latency is only applied on the server side)
 
@@ -56,3 +58,6 @@ cast -> Messages per second: 17.7845
 ```
 
 
+# Client and broker collocated and remote server
+
+TODO
