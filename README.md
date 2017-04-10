@@ -26,6 +26,9 @@ git clone https://github.com/kgiusti/oslo-messaging-clients.git
 ## Client and Server
 
 ```
+IF=enp0s8
+# remove any previous policy
+sudo tc qdisc del dev $IF root
 sudo tc qdisc add dev $IF root netem delay 50ms
 ```
 
