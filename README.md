@@ -60,6 +60,8 @@ sudo tc qdisc add dev $IF root netem delay 50ms
 
 ## Some results
 
+* Virtualbox : 1 core/512 MRAM
+* G5K : 8 cores/24GRAM
 
 ### RPC Server, RPC client and broker collocated
 
@@ -98,9 +100,12 @@ cast -> Messages per second: 17.7845
 
 ```
 Default latency : 0.300 ms
+(g5k) Default latency : 0.200 ms
 
 call -> Messages per second: 88.6217
+(g5k) call -> Messages per second: 215.6920
 cast -> Messages per second: 684.3274
+(g5k) cast -> Messages per second: 1129.5476
 
 Latency : 10ms
 
@@ -110,12 +115,16 @@ cast -> Messages per second: 688.8522
 Latency : 50ms
 
 call -> Messages per second: 13.9842
+(g5k) call -> Messages per second: 14.6501
 cast -> Messages per second: 1168.1541
+(g5K) -> Messages per second: 1170.6581
 
 Latency : 100ms
 
 call -> Messages per second: 8.5113
+(g5k) => Messages per second: 8.7119
 cast -> Messages per second: 1092.7049
+(g5k) -> Messages per second: 1205.2702
 
 ```
 
