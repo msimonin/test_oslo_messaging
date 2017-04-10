@@ -69,7 +69,9 @@ sudo tc qdisc add dev $IF root netem delay 50ms
 
 ```
 call -> Messages per second: 96.3317 
+(g5k) call -> Messages per second: 224.1414 
 cast -> Messages per second: 593.5845
+(g5k) cast -> Messages per second: 1119.7083
 ```
 
 ### Server and broker collocated and remote client
@@ -80,17 +82,23 @@ cast -> Messages per second: 593.5845
 Default latency : 0.300 ms
 
 call -> Messages per second: 109.4419
+(g5k) call -> Messages per second: 218.7064
 cast -> Messages per second: 511.7233
+(g5k) cast -> Messages per second: 1062.6643
 
 Latency : 10ms
 
 call -> Messages per second: 47.8049
+(g5k) call -> Messages per second: 62.4751
 cast -> Messages per second: 76.4053
+(g5k) cast -> Messages per second: 84.8528
 
 Latency : 50ms
 
 call -> Messages per second: 14.9477
+(g5k) -> Messages per second: 16.1241
 cast -> Messages per second: 17.7845
+(g5k) cast -> Messages per second: 18.3269
 ```
 
 
