@@ -35,7 +35,8 @@ sudo tc qdisc add dev $IF root netem delay 50ms
 
 ## Some results
 
-(Min on 5 runs)
+* Min on 5 runs
+* Results for symetric and asymetric latencies (asymetric : latency is only applied on the server side)
 
 ```
 Default latency : 0.300 ms
