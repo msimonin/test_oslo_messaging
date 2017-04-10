@@ -4,6 +4,8 @@
 git clone https://github.com/kgiusti/oslo-messaging-clients.git
 ```
 
+Thanks @kgiusti :)
+
 # Topology
 
 ```
