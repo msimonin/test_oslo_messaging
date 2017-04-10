@@ -6,6 +6,11 @@ git clone https://github.com/kgiusti/oslo-messaging-clients.git
 
 Thanks @kgiusti :)
 
+
+```
+vagrant up [--provider=g5k]
+```
+
 # Topology
 
 ```
