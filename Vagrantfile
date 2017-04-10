@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$server = <<SCRIPT
+$rabbit = <<SCRIPT
 apt-get install -y rabbitmq-server
 rabbitmqctl add_user test test
 rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
@@ -16,18 +16,16 @@ pip install -r /vagrant/oslo-messaging-clients/requirements.txt
 SCRIPT
 
 Vagrant.configure(2) do |config|
-  # config.vm.box = "debian/contrib-jessie64"
   config.vm.box = 'boxcutter/ubuntu1610'
-  # build machine
-  config.vm.define "server" do |server|
-    server.vm.network "private_network", ip: "192.168.11.2"
-    server.vm.provision "shell", inline: $all
-    server.vm.provision "shell", inline: $server
+
+  config.vm.define "machine01" do |machine|
+    machine.vm.network "private_network", ip: "192.168.11.2"
+    machine.vm.provision "shell", inline: $all
+    machine.vm.provision "shell", inline: $rabbit
   end
 
-  # server machine
-  config.vm.define "client" do |client|
-    client.vm.network "private_network", ip: "192.168.11.3"
-    client.vm.provision "shell", inline: $all
+  config.vm.define "machine02" do |machine|
+    machine.vm.network "private_network", ip: "192.168.11.3"
+    machine.vm.provision "shell", inline: $all
   end
 end
