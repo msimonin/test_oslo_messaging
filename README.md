@@ -74,7 +74,7 @@ cast -> Messages per second: 593.5845
 (g5k) cast -> Messages per second: 1119.7083
 ```
 
-### Server and broker collocated and remote client
+### RPC Server and broker collocated and remote RPC client
 
 * Min on 5 runs
 
@@ -102,7 +102,7 @@ cast -> Messages per second: 17.7845
 ```
 
 
-### Client and broker collocated and remote server
+### RPC Client and broker collocated and remote RPC server
 
 * Min on 5 runs
 
